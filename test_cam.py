@@ -6,11 +6,11 @@ import torch
 sys.path.insert(1, "MTCNN")
 from mtcnn import MTCNN 
 
-device = 'cpu'
-#device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
+#device = 'cpu'
+device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 detector = MTCNN(image_size=160, select_largest=False, device=device)
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("../1.mp4")
 if not (cap.isOpened()):
 	print("Could not open video device")
 
@@ -19,6 +19,7 @@ while(True):
 	start = time.time()
 	image = cv2.flip(frame, 1)
 	faces, _, points = detector.detect(image, landmarks=True)
+	
 	if faces is not None:
 		faces = (np.int32(faces)).reshape(-1, 2, 2)
 		for face in faces:

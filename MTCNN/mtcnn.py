@@ -344,6 +344,7 @@ class MTCNN(nn.Module):
             probs = probs[0]
             points = points[0]
 
+
         if landmarks:
             return boxes, probs, points
 
