@@ -1,7 +1,7 @@
 # FaceDetector
 Some Face Detector Libraries Speed Test 
 
-<img src='https://raw.githubusercontent.com/CuteBoiz/FaceDetector/master/detected.png' width=600 height=350>
+<img src='https://raw.githubusercontent.com/CuteBoiz/FaceDetector/master/ElapsedTime.png' width=600 height=350>
 
 ## Contents
 - **[Face Detector with HOG + SVM from scatch](https://github.com/CuteBoiz/FaceDetector/blob/master/HOG.ipynb)**
