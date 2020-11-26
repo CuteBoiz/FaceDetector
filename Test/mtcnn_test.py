@@ -5,7 +5,8 @@ import sys
 sys.path.insert(1, "../MTCNN")
 from mtcnn import MTCNN
 
-device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
+#device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
+device = 'cpu'
 detector = MTCNN(device=device)
 
 image_path = '../Images/1.jpg'
